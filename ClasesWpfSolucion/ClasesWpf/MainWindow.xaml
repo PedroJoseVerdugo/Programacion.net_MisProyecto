@@ -7,18 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="750" Width="1000">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="63*"/>
-            <ColumnDefinition Width="54*"/>
-            <ColumnDefinition Width="8*"/>
-            <ColumnDefinition Width="45*"/>
-            <ColumnDefinition Width="30*"/>
-            <ColumnDefinition Width="27*"/>
-            <ColumnDefinition Width="31*"/>
-            <ColumnDefinition Width="44*"/>
-            <ColumnDefinition Width="498*"/>
-        </Grid.ColumnDefinitions>
-        <Button Grid.Column="8" Content="Button" HorizontalAlignment="Left" Margin="153,237,0,0" VerticalAlignment="Top" Height="107" Width="213" Click="Button_Click"/>
+
+
+        <StackPanel>
+            <Label>Pregunta 1: ¿Cuál es tu equipo de fútbol favorito?</Label>
+            <TextBox x:Name="Equipo1TextBox"/>
+
+            <Label>Pregunta 2: ¿Quién es tu jugador favorito?</Label>
+            <TextBox x:Name="Equipo2TextBox"/>
+
+            <Label>Pregunta 3: ¿Cuál es el mejor equipo de la historia?</Label>
+            <TextBox x:Name="Equipo3TextBox"/>
+
+            <Button Content="Enviar Respuestas" Click="EnviarRespuestas_Click"/>
+        </StackPanel>
+        <ListView HorizontalAlignment="Left" Height="216" Margin="314,238,0,0" VerticalAlignment="Top" Width="320" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="314,174,0,0" VerticalAlignment="Top" Height="42" Width="128"/>
+
 
     </Grid>
 </Window>

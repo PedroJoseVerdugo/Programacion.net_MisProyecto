@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ClasesWpf
+namespace WpfVentanas
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -20,12 +20,5 @@ namespace ClasesWpf
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Hola Mundo ");
-            MessageBox.Show("te has confundidio, vuelve a intentarlo ");
-        }
-
     }
 }

@@ -1,0 +1,19 @@
+﻿<Window x:Class="ClaseWpf2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClaseWpf2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Button Content="TuSabroson" HorizontalAlignment="Left" Margin="187,75,0,0" VerticalAlignment="Top"
+                Height="60" Width="97"
+                Click="Button_Click"/>
+        <ListView Height="166" Width="308" d:ItemsSource="{d:SampleData ItemCount=5}" x:Name="Lista">
+        
+        </ListView>
+    </StackPanel>
+
+    
+</Window>
