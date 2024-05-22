@@ -9,11 +9,17 @@
             Console.WriteLine(new string('-', 30)); // Línea separadora
             Console.WriteLine(new string('-', 30)); // Línea separadora
 
-            Console.WriteLine("HOLA BIENVENIDOS ALA INFORMACION DE LOS EMPLEADOS!");
+            Console.WriteLine("HOLA BIENVENIDOS A LA INFORMACION DE LOS EMPLEADOS!");
 
             Console.WriteLine(new string('-', 30)); // Línea separadora
             Console.WriteLine(new string('-', 30)); // Línea separadora
             Console.WriteLine(new string('-', 30)); // Línea separadora
+
+
+            var listaEmpleados = new List<Empleado>();
+
+            /*var dias = new List<String>();
+            var numerosMeses = new List<int>();*/
 
             //Crear Tony
             var emp1 = new Empleado();//todas las clases vienene de object
@@ -22,6 +28,9 @@
             emp1.FechaAlta = new DateTime(2021, 1, 1);
             emp1.Turno = "Turno";
             emp1.Salario = 20000;
+            emp1.TVacaciones = 25;
+
+            listaEmpleados.Add(emp1);
 
             //emp1.ToString(); de aqui salen todas las clases
 
@@ -32,14 +41,18 @@
                 FechaAlta = new DateTime(2023 / 2 / 1),
                 Turno = "Mañana",
                 Salario = 21000,
+                TVacaciones = 25,
 
             };
+            listaEmpleados.Add(emp2);
             //crera clase maria mediante el constructor
             var emp3 = new Empleado("Maria",
                                     new DateTime(2023, 7, 1),
                                     ("Mañana"),
-                                    22000
+                                    22000, 5,25
+
                                     ) ;
+            listaEmpleados.Add(emp3);
 
             /*--------EJERCICIO------*/
 
@@ -53,6 +66,10 @@
             emp4.FechaAlta = new DateTime(2024, 5, 21);
             emp4.Turno = "Nocturno";
             emp4.Salario = 26000;
+            emp4.TVacaciones = 5;
+            emp4.DiasVacaciones=25;
+
+            //listaEmpleados.Add(emp4);
 
             var emp5 = new Empleado()
             {
@@ -60,13 +77,22 @@
                 FechaAlta = new DateTime(2024 / 5 / 25),
                 Turno = "Mañana",
                 Salario = 26000,
+                TVacaciones = 5,
+                DiasVacaciones = 25,
 
             };
+
+            listaEmpleados.Add(emp5);
+
             var emp6 = new Empleado("Juan",
                                    new DateTime(2024, 5, 10),
                                    ("Tarde"),
-                                   26000);
+                                   26000,
+                                    5,
+                                    25
+                                    );
 
+            listaEmpleados.Add(emp6);
 
             /*  ----MOSTRAR IOMFORMACION-----  */
             //emp1                  
@@ -74,6 +100,7 @@
             Console.WriteLine($"Fecha de Alta: {emp1.FechaAlta}");
             Console.WriteLine($"Turno: {emp1.Turno}");
             Console.WriteLine($"Salario: {emp1.Salario}");
+            Console.WriteLine($"TotalVacaciones: {emp1.TVacaciones}");
 
 
             Console.WriteLine(new string('-', 30)); // Línea separadora
@@ -83,6 +110,7 @@
             Console.WriteLine($"Fecha de Alta: {emp2.FechaAlta}");
             Console.WriteLine($"Turno: {emp2.Turno}");
             Console.WriteLine($"Salario: {emp2.Salario}");
+            Console.WriteLine($"TotalVacaciones: {emp2.TVacaciones}");
 
             Console.WriteLine(new string('-', 30)); // Línea separadora
 
@@ -91,6 +119,7 @@
             Console.WriteLine($"Fecha de Alta: {emp3.FechaAlta}");
             Console.WriteLine($"Turno: {emp3.Turno}");
             Console.WriteLine($"Salario: {emp3.Salario}");
+            Console.WriteLine($"TotalVacaciones: {emp3.TVacaciones}");
 
             Console.WriteLine(new string('-', 30)); // Línea separadora
 
@@ -99,6 +128,7 @@
             Console.WriteLine($"Fecha de Alta: {emp4.FechaAlta}");
             Console.WriteLine($"Turno: {emp4.Turno}");
             Console.WriteLine($"Salario: {emp4.Salario}");
+            Console.WriteLine($"TotalVacaciones: {emp4.TVacaciones}");
 
             Console.WriteLine(new string('-', 30)); // Línea separadora
 
@@ -107,6 +137,7 @@
             Console.WriteLine($"Fecha de Alta: {emp5.FechaAlta}");
             Console.WriteLine($"Turno: {emp5.Turno}");
             Console.WriteLine($"Salario: {emp5.Salario}");
+            Console.WriteLine($"TotalVacaciones: {emp5.TVacaciones}");
 
             Console.WriteLine(new string('-', 30)); // Línea separadora
 
@@ -115,6 +146,7 @@
             Console.WriteLine($"Fecha de Alta: {emp6.FechaAlta}");
             Console.WriteLine($"Turno: {emp6.Turno}");
             Console.WriteLine($"Salario: {emp6.Salario}");
+            Console.WriteLine($"TotalVacaciones: {emp6.TVacaciones}");
             /*
             Console.WriteLine($"Nombre: {emp7.Nombre}");
             Console.WriteLine($"Fecha de Alta: {emp7.FechaAlta}");
@@ -124,6 +156,23 @@
 
 
             Console.WriteLine(new string('-', 30)); // Línea separadora
+           
+            
+            /*
+            var costes = 0;
+            for (int i = 0; i < listaEmpleados.Count; i++)
+            {
+                costes = costes + listaEmpleados[i].Salario;
+
+            }*//*
+            var costes = 0;
+            foreach (var empleado in listaEmpleados)
+            {
+                costes = costes + empleado.Salario;
+            }
+            Console.WriteLine(costes);
+            Console.ReadLine();
+            */
 
         }
 
