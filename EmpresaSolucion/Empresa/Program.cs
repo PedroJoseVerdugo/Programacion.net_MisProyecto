@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-
+            
             Console.WriteLine(new string('-', 30)); // Línea separadora
             Console.WriteLine(new string('-', 30)); // Línea separadora
             Console.WriteLine(new string('-', 30)); // Línea separadora
@@ -14,6 +14,7 @@
             Console.WriteLine(new string('-', 30)); // Línea separadora
             Console.WriteLine(new string('-', 30)); // Línea separadora
             Console.WriteLine(new string('-', 30)); // Línea separadora
+
 
 
             var listaEmpleados = new List<Empleado>();
@@ -49,7 +50,7 @@
             var emp3 = new Empleado("Maria",
                                     new DateTime(2023, 7, 1),
                                     ("Mañana"),
-                                    22000, 5,25
+                                    22000, 5
 
                                     ) ;
             listaEmpleados.Add(emp3);
@@ -78,8 +79,6 @@
                 Turno = "Mañana",
                 Salario = 26000,
                 TVacaciones = 5,
-                DiasVacaciones = 25,
-
             };
 
             listaEmpleados.Add(emp5);
@@ -88,8 +87,7 @@
                                    new DateTime(2024, 5, 10),
                                    ("Tarde"),
                                    26000,
-                                    5,
-                                    25
+                                    5
                                     );
 
             listaEmpleados.Add(emp6);
@@ -156,8 +154,8 @@
 
 
             Console.WriteLine(new string('-', 30)); // Línea separadora
-           
-            
+
+
             /*
             var costes = 0;
             for (int i = 0; i < listaEmpleados.Count; i++)
@@ -173,6 +171,49 @@
             Console.WriteLine(costes);
             Console.ReadLine();
             */
+            /*
+            var listaEmpleados = new List<Empleado>();
+
+            // Crear empleados
+            var emp1 = new Empleado("Tony", new DateTime(2021, 1, 1), "Turno", 20000, 25);
+            listaEmpleados.Add(emp1);
+
+            var emp2 = new Empleado("Pepe", new DateTime(2023, 2, 1), "Mañana", 21000, 25);
+            listaEmpleados.Add(emp2);
+
+            var emp3 = new Empleado("Maria", new DateTime(2023, 7, 1), "Mañana", 22000, 25);
+            listaEmpleados.Add(emp3);
+
+            var emp4 = new Empleado("Carlos", new DateTime(2024, 5, 21), "Nocturno", 26000, 25);
+            listaEmpleados.Add(emp4);
+
+            var emp5 = new Empleado("Yuby", new DateTime(2024, 5, 25), "Mañana", 26000, 25);
+            listaEmpleados.Add(emp5);
+
+            var emp6 = new Empleado("Juan", new DateTime(2024, 5, 10), "Tarde", 26000, 25);
+            listaEmpleados.Add(emp6);*/
+
+
+
+
+            emp4.DescontarDiasVacaciones(4); // Carlos pidió 4 días en enero
+            emp5.DescontarDiasVacaciones(10);
+            // Mostrar información de los empleados
+            foreach (var empleado in listaEmpleados)
+            {
+                empleado.MostrarInformacion();
+            }
+
+            // Calcular y mostrar el coste total de salarios
+            double costes = 0;
+            foreach (var empleado in listaEmpleados)
+            {
+                costes += empleado.Salario;
+            }
+            Console.WriteLine($"Coste total de salarios: {costes}");
+            Console.ReadLine();
+
+
 
         }
 

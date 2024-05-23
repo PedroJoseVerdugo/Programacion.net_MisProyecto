@@ -18,16 +18,38 @@ namespace Empresa
                          //y no devuleve nada
                          //constructor por defecto(sin parametros)
         {
+            this.DiasVacaciones = 30;
         }
-        public Empleado(string nombre, DateTime fechaalta, string turno, double salario, int Tvacaciones,int diasvacaciones )
+        public Empleado(string nombre, DateTime fechaalta, string turno, double salario, int Tvacaciones)
         {
             this.Nombre = nombre;
             this.FechaAlta = fechaalta;
             this.Turno = turno;
             this.Salario = salario;
             this.TVacaciones = Tvacaciones;
-            this.DiasVacaciones = diasvacaciones;
+            this.DiasVacaciones = 30;
 
+        }
+        public void DescontarDiasVacaciones(int diasUtilizados)
+        {
+            if (diasUtilizados <= DiasVacaciones)
+            {
+                DiasVacaciones -= diasUtilizados;
+            }
+            else
+            {
+                Console.WriteLine($"{Nombre} no tiene suficientes días de vacaciones.");
+            }
+        }
+        public void MostrarInformacion()
+        {
+            Console.WriteLine($"Nombre: {Nombre}");
+            Console.WriteLine($"Fecha de Alta: {FechaAlta.ToShortDateString()}");
+            Console.WriteLine($"Turno: {Turno}");
+            Console.WriteLine($"Salario: {Salario}");
+            Console.WriteLine($"Total Vacaciones: {TVacaciones}");
+            Console.WriteLine($"Días de Vacaciones Restantes: {DiasVacaciones}");
+            Console.WriteLine(new string('-', 30)); // Línea separadora
         }
 
     }
