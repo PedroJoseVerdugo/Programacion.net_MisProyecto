@@ -13,7 +13,17 @@ namespace WebAspnVavio.Controllers
             return Ok("Hola Mundo como estaaaaa!!!!!");
         }
     }
-}
+    /*
+    public class EmpleadoController : ControllerBase
+    {
+        [HttpGet]
+        public IActionResult Saludo()
+        {
+            var empleado = new Empleado("Tony", new DataTime(2021, 1, 1), "Tarde", 200000, 30, 4);
+            return ok(empleado);
+
+        }*/
+    }
 
 
 
