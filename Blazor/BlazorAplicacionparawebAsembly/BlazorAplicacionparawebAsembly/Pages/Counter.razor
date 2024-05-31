@@ -1,0 +1,60 @@
+﻿@page "/counter"
+@using BlazorAplicacionparawebAsembly
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+Bienvenido @Nombre2
+Hoy es @FechaHoy2
+Fecha nacimiento @FechaNacimiento2
+El telefono es @Telefono2
+Bienvenido @Nombre2
+
+Hoy es @FechaHoy
+
+Fecha de nacimiento @FechaNacimiento
+
+Telefono: @Telefono2
+
+Temperatura actual : @Farenheit2
+
+<p role="status">Contador actual: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+
+
+
+<p role="status">Contador actual: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    /*mio */
+    private string Nombre = "Carlos";
+    private DateTime FechaHoy = DateTime.Now;
+    private DateTime FechaNacimiento = new DateTime(1989, 4, 9);
+    private string telefono = "23124124";
+    /*Profe*/
+    private int currentCount2 = 0;
+
+    private string Nombre2 = "Juan";
+
+    private DateTime FechaHoy2 = DateTime.Now;
+
+    private DateTime FechaNacimiento2 = new DateTime(1970, 1, 1);
+
+    private string Telefono2 = "12456454";
+
+    private double Farenheit2 = TemperatureConverter.CelsiusToFahrenheit("30");
+    
+    
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

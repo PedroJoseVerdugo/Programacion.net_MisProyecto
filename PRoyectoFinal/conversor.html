@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Divisas - Conversor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Convertidor de Divisas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="introduccion.html">Introducción</a></li>
+                <li><a href="monedas.html">Monedas</a></li>
+                <li><a href="sobre.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Conversor de Divisas</h2>
+            <div class="converter-frame">
+                <div class="converter">
+                    <input type="number" id="amount" placeholder="Cantidad" min="0" step="0.01">
+                    <select id="fromCurrency">
+                        <option value="EUR">EUR</option>
+                        <option value="USD">USD</option>
+                        <!-- Agrega más opciones según tus necesidades -->
+                    </select>
+                    <select id="toCurrency">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <!-- Agrega más opciones según tus necesidades -->
+                    </select>
+                    <button id="convertBtn">Convertir</button>
+                </div>
+                <div class="result">
+                    <h3>Resultado:</h3>
+                    <p id="resultText"></p>
+                    <div id="loading" style="display: none;">Cargando...</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><a href="index.html">Volver al Inicio</a></p>
+        <p>&copy; 2024 Convertidor de Divisas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿@page "/_Prueba1"
+
+<h3>Prueba1</h3>
+
+
+
+<EditForm Model="@user" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label for="name">Name:</label>
+        <InputText id="name" @bind-Value="user.Name" class="form-control" />
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <InputText id="email" @bind-Value="user.Email" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>
+
+@code {
+    private User user = new User();
+
+    private void HandleValidSubmit()
+    {
+        // Aquí puedes manejar lo que sucede cuando el formulario es enviado correctamente
+        Console.WriteLine($"Name: {user.Name}, Email: {user.Email}");
+    }
+
+    public class User
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+    }
+}
