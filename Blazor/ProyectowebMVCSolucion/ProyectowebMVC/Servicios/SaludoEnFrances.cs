@@ -1,0 +1,10 @@
+﻿namespace ProyectowebMVC.Servicios;
+
+public class SaludoEnFrances : ISaludo
+{
+    public string Mensaje { get; set; }
+    public string Saludo()
+    {
+        return "Bonjour le monde";
+    }
+}
