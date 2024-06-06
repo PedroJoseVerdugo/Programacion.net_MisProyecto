@@ -1,6 +1,9 @@
 global using Microsoft.AspNetCore.Mvc;
 global using ProyectowebMVC.Models;
 global using System.Diagnostics;
+using ProyectowebMVC.ViewModels;
+using System.Net;
+using System.Xml.Linq;
 
 namespace ProyectowebMVC.Controllers;
 
@@ -15,7 +18,16 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        var ViewModel = new HomeIndexViewModel();
+
+        ViewModel.Vision = "Mejorando dia a dia";
+        ViewModel.NombreEmpresa = "Saltoki";
+        ViewModel.Name = "Pedro jose";
+        ViewModel.Dni = "12334456";
+        ViewModel.Description = "ESta es la descripcion";
+        ViewModel.Telefono = "111111111";
+
+        return View(ViewModel);
     }
 
     public IActionResult Privacy()
