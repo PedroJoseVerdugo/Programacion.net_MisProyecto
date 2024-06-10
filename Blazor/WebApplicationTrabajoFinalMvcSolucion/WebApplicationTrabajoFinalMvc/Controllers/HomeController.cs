@@ -23,6 +23,22 @@ namespace WebApplicationTrabajoFinalMvc.Controllers
             return View();
         }
 
+        public IActionResult Conversor()
+        {
+            return View();
+        }
+
+        public IActionResult Monedas()
+        {
+            return View();
+        }
+
+        public IActionResult Sobremi()
+        {
+            return View();
+        }
+
+
 
 
 

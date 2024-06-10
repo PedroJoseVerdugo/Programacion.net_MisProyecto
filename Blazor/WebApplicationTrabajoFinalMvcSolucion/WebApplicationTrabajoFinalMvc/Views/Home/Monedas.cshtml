@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Monedas Page";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monedas Disponibles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.cshtml">Inicio</a></li>
+                <li><a href="Conversor.cshtml">Conversor</a></li>
+                <li><a href="Conversor.cshtml">Conversor</a></li>
+                <li><a href="Monedas.cshtml">Monedas</a></li>
+                <li><a href="Sobremi.cshtml">Sobre Mí</a></li>
+                <li><a href="Contacto.cshtml">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="monedas">
+            <div class="container">
+                <h1>Monedas Disponibles</h1>
+                <ul id="monedas-list">
+                    <!-- Aquí se cargarán dinámicamente las monedas disponibles -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Conversor de Divisas. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
