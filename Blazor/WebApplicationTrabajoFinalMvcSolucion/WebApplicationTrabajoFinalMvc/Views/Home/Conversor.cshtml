@@ -1,62 +1,28 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
 @{
-    ViewData["Title"] = "Conversor Page";
+    ViewData["Title"] = "Conversor";
 }
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de Divisas</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.cshtml">Inicio</a></li>
-                <li><a href="Conversor.cshtml">Conversor</a></li>
-                <li><a href="Monedas.cshtml">Monedas</a></li>
-                <li><a href="Sobremi.cshtml">Sobre Mí</a></li>
-                <li><a href="Contacto.cshtml">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="inicio">
-            <div class="container">
-                <h1>Conversor de Divisas</h1>
+<h1>Conversor de Divisas</h1>
+<form asp-action="Convertir">
+    <div class="form-group">
+        <label for="fromCurrency">De:</label>
+        <input type="text" id="fromCurrency" name="fromCurrency" required />
+    </div>
+    <div class="form-group">
+        <label for="toCurrency">A:</label>
+        <input type="text" id="toCurrency" name="toCurrency" required />
+    </div>
+    <div class="form-group">
+        <label for="amount">Cantidad:</label>
+        <input type="number" id="amount" name="amount" required />
+    </div>
+    <button type="submit">Convertir</button>
+</form>
 
-                <div class="converter">
-                    <div class="currency">
-                        <label for="from-currency">De:</label>
-                        <select id="from-currency">
-                            <!-- Opciones de monedas de origen cargadas dinámicamente por JavaScript -->
-                        </select>
-                    </div>
-                    <div class="currency">
-                        <label for="to-currency">A:</label>
-                        <select id="to-currency">
-                            <!-- Opciones de monedas de destino cargadas dinámicamente por JavaScript -->
-                        </select>
-                    </div>
-                    <div class="amount">
-                        <label for="amount">Cantidad:</label>
-                        <input type="number" id="amount" placeholder="1">
-                    </div>
-                    <button id="convert-button">Convertir</button>
-                </div>
-                <div id="result"></div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Mi Conversor de Divisas. Todos los derechos reservados.</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+@if (ViewBag.Result != null)
+{
+    <div>
+        <h2>Resultado: @ViewBag.Result</h2>
+    </div>
+}

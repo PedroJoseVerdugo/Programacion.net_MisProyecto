@@ -1,7 +1,15 @@
+
+using WebApplicationTrabajoFinalMvc.Models.Servicios;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<ServicioConversionMoneda>();
+builder.Services.AddHttpClient();
+
+builder.Services.AddScoped<ISaludo, SaludoEnAleman>();
 
 var app = builder.Build();
 
