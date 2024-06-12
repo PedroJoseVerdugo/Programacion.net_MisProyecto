@@ -1,5 +1,6 @@
 ﻿@using WebMoneda4_5.ViewModels
-@model ConversorIndexViewModel
+@model WebApplicationTrabajoFinalMvc.ViewModels.ConversorIndexViewModel
+
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -9,32 +10,32 @@
 
 @using (Html.BeginForm())
 {
-    @Html.DropDownListFor(m => m.monedaOrigen, new SelectList(Model.ListaMonedas), "Selecciona Moneda Origen")
-    @Html.DropDownListFor(m => m.monedaDestino, new SelectList(Model.ListaMonedas), "Selecciona Moneda Destino")
+    @Html.DropDownListFor(m => m.MonedaOrigen, new SelectList(Model.ListaMonedas), "Selecciona Moneda Origen")
+    @Html.DropDownListFor(m => m.MonedaDestino, new SelectList(Model.ListaMonedas), "Selecciona Moneda Destino")
     <input name="importe" />
     <input type="submit" name="submitButton" value="Submit" />
 }
 
 
 
-@if (!string.IsNullOrEmpty(Model.monedaOrigen))
+@if (!string.IsNullOrEmpty(Model.MonedaOrigen))
 {
-    <h3>Moneda de origen seleccionada: @Model.monedaOrigen</h3>
+    <h3>Moneda de origen seleccionada: @Model.MonedaOrigen</h3>
 }
 
-@if (!string.IsNullOrEmpty(Model.monedaDestino))
+@if (!string.IsNullOrEmpty(Model.MonedaDestino))
 {
-    <h3>Moneda de destino seleccionada: @Model.monedaDestino</h3>
+    <h3>Moneda de destino seleccionada: @Model.MonedaDestino</h3>
 }
 
-@if (!string.IsNullOrEmpty(Model.importe))
+@if (!string.IsNullOrEmpty(Model.Importe))
 {
-    <h3>Importe seleccionada: @Model.importe</h3>
+    <h3>Importe seleccionada: @Model.Importe</h3>
 }
 
-@if (!string.IsNullOrEmpty(Model.resultado))
+@if (!string.IsNullOrEmpty(Model.Resultado))
 {
-    <h3>El resultado de la conversión es el siguiente: @Model.resultado @Model.monedaDestino</h3>
+    <h3>El resultado de la conversión es el siguiente: @Model.Resultado @Model.MonedaDestino</h3>
 }
 
 <!-- <p>Submitted value: @ViewBag.SubmittedValue</p> -->

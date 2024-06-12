@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApplicationTrabajoFinalMvc.Models;
 
-using WebApplicationTrabajoFinalMvc.ViewModels;
-
-namespace WebMoneda4_5.Controllers;
+namespace WebApplicationTrabajoFinalMvc.Controllers;
 
 public class UsuariosController : Controller
 {
@@ -12,7 +10,7 @@ public class UsuariosController : Controller
         var usuario = new Usuario();
         usuario.Nombre = "Dolores";
         usuario.Contraseña = "23435";
-        usuario.Telefono = "68374293";
+        usuario.FechaNacimiento = "julio de 5 del 2024" ;
         usuario.Email = "email";
 
         return View(usuario);
