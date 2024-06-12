@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using WebApplicationTrabajoFinalMvc.Models.Servicios;
 using WebApplicationTrabajoFinalMvc.ViewModels;
 
@@ -34,7 +32,7 @@ namespace WebApplicationTrabajoFinalMvc.Controllers
             List<string> listaMonedas = await _servicioConversionMoneda.ObtenerMonedas();
             vm.ListaMonedas = listaMonedas;
 
-            vm.resultado = await _servicioConversionMoneda.Conversion(vm.monedaOrigen, vm.monedaDestino, vm.importe);
+            vm.Resultado = await _servicioConversionMoneda.Conversion(vm.MonedaOrigen, vm.MonedaDestino, vm.Importe);
 
             return View(vm);
         }

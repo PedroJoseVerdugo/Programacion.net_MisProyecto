@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using Newtonsoft.Json.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 public class ExchangeRateService
