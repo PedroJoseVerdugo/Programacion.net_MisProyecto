@@ -9,6 +9,8 @@ namespace WebApplicationTrabajoFinalMvc.Models.Servicios
     public class ServicioConversionMoneda
     {
 
+       
+
 
         // Crear un campo para guardar el HttpClient
 
@@ -24,7 +26,7 @@ namespace WebApplicationTrabajoFinalMvc.Models.Servicios
             _httpClient = httpClient;
         }
 
-
+        //Todo: csntidad de dinero a convertir debe ser obligatoria
         public async Task<List<string>> ObtenerMonedas()
         {
             // Llamar al servicio que obtiene las monedas

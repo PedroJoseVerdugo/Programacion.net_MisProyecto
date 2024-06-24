@@ -1,0 +1,61 @@
+﻿@model FinalTrabajo.Models.ConversorMonedaConversionViewModel
+
+@{
+    ViewData["Title"] = "Convertir Moneda";
+}
+
+<h2>Convertir Moneda</h2>
+
+<form asp-action="Converter" method="post">
+    <div class="form-group">
+        <label for="Amount">Importe</label>
+        <input type="text" class="form-control" id="Amount" name="Amount" asp-for="Amount" required />
+    </div>
+    @* <div class="form-group">
+        <label for="Amount">Importe</label>
+        <input type="number" class="form-control" id="Amount" name="Amount" asp-for="Amount" step="0.01" required />
+    </div> *@
+    <div class="form-group">
+        <label for="SourceCurrency">Moneda Origen</label>
+        <select class="form-control" id="SourceCurrency" name="SourceCurrency" asp-for="SourceCurrency" required>
+            @foreach (var code in Model.ValidCurrencyCodes)
+            {
+                <option value="@code">@code</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="TargetCurrency">Moneda Destino</label>
+        <select class="form-control" id="TargetCurrency" name="TargetCurrency" asp-for="TargetCurrency" required>
+            @foreach (var code in Model.ValidCurrencyCodes)
+            {
+                <option value="@code">@code</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Convertir</button>
+</form>
+
+
+@if (Convert.ToDecimal(Model.Result) > 0.01m)
+{
+    <div>
+        <h2>Resultado de la conversión:</h2>
+        <p>@Model.Result</p>
+    </div>
+}
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger" role="alert">
+        <ul>
+            @foreach (var key in ViewData.ModelState.Keys)
+            {
+                foreach (var error in ViewData.ModelState[key].Errors)
+                {
+                    <li>@error.ErrorMessage</li>
+                }
+            }
+        </ul>
+    </div>
+}
+

@@ -1,10 +1,17 @@
 
+using Microsoft.EntityFrameworkCore;
+using WebApplicationTrabajoFinalMvc.Models;
 using WebApplicationTrabajoFinalMvc.Models.Servicios;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//agregar servivio fr Base fde datos
+builder.Services.AddDbContext<Contexto>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultContextConnection"));
+});
 
 builder.Services.AddScoped<ServicioConversionMoneda>();
 builder.Services.AddHttpClient();

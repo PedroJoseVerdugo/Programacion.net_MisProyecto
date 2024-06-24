@@ -8,8 +8,9 @@ namespace WebApplicationTrabajoFinalMvc.Models
         {
         }
 
-        public DbSet<Usuario> Usuarios { get; set; }    
-
-
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Divisa> Divisas { get; set; }
+        public DbSet<Historico> Historicos { get; set; }
+        public DbSet<Pais> Pais { get; set; }
     }
 }

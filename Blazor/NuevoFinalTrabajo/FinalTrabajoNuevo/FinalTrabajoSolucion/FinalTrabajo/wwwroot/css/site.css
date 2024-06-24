@@ -1,0 +1,94 @@
+/* Estilos generales del cuerpo del sitio */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Fondo gris claro para una apariencia agradable */
+    color: #333333; /* Texto gris oscuro para legibilidad */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura visible */
+}
+
+/* Contenedor principal que engloba toda la página */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #1a73e8; /* Fondo azul suave */
+    color: #ffffff; /* Texto blanco */
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Estilos del contenido principal */
+main {
+    flex: 1; /* Crece para ocupar el espacio restante */
+    padding: 1rem;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #1a73e8; 
+    color: #ff0000; 
+    padding: 1rem;
+    text-align: center; 
+}
+
+/* Estilos para las tablas */
+table {
+    width: 80%; /* Ancho de la tabla al 80% */
+    margin: 20px auto; /* Centra la tabla con un margen superior e inferior */
+    border-collapse: collapse; /* Colapsa los bordes de la tabla */
+}
+
+table, th, td {
+    border: 1px solid #dddddd; /* Borde delgada gris */
+    padding: 8px; /* Relleno interior de las celdas */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+th {
+    background-color: #f2f2f2; /* Fondo gris claro para las celdas de encabezado */
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #1a73e8; /* Color azul para los enlaces */
+    text-decoration: none; /* Sin subrayado predeterminado */
+}
+
+    a:hover {
+        text-decoration: underline; /* Subrayado al pasar el ratón */
+    }
+
+/* Estilos adicionales para párrafos, listas y otros elementos */
+p, ul, ol {
+    margin-bottom: 1.5rem; /* Margen inferior para separación */
+}
+
+/* Estilos específicos para encabezados dentro del contenido */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem; /* Margen superior para separación */
+    margin-bottom: 1rem; /* Margen inferior para separación */
+}
+
+/* Estilos específicos para el título de la página */
+h1 {
+    color: #129c0c; 
+
+/* Estilos específicos para los elementos de lista */
+ul, ol {
+    padding-left: 2rem; /* Sangría para listas */
+}
+
+.text-custom-color {
+    color: #f0f2f5; /* Color del texto (puedes cambiar el color a tu preferencia) */
+}
+
+
+

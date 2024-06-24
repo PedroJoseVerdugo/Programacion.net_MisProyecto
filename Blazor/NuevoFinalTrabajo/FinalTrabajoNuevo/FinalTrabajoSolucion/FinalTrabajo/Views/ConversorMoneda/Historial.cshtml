@@ -1,0 +1,36 @@
+﻿@model IEnumerable<FinalTrabajo.Models.ConversorMonedaQuery>
+
+@{
+    ViewData["Title"] = "Historial de Conversiones";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Historial de Conversiones</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Moneda Origen</th>
+                <th>Moneda Destino</th>
+                <th>Importe</th>
+                <th>Resultado</th>
+                <th>Factor</th>
+                <th>Usuario</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var query in Model)
+            {
+                <tr>
+                    <td>@query.MonedaOrigen</td>
+                    <td>@query.MonedaDestino</td>
+                    <td>@query.Importe</td>
+                    <td>@query.Resultado</td>
+                    <td>@query.Factor</td>
+                    <td>@query.Usuario</td>
+                    <td>@query.Fecha</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
